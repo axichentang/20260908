@@ -5,19 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 IE 01 - xiaohe
-  type: ss
-  server: 20.107.219.181
+  type: vless
+  server: 169.40.42.231
   port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 2fGnKgP8k8EHFuvj
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+  servername: yahoo.com
+  client-fingerprint: ios
 - name: 🇮🇪 IE 02 - xiaohe
-  type: ss
-  server: 20.107.219.181
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 2fGnKgP8k8EHFuvj
+  type: vless
+  server: 23.95.225.10
+  port: 8443
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: PROXIES
   type: select
